@@ -1,0 +1,6 @@
+@ARPS_WorldDescriberAPI_HostAddress = http://localhost:5031
+
+GET {{ARPS_WorldDescriberAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

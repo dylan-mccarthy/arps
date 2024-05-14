@@ -1,0 +1,30 @@
+@page "/gamemaster"
+@using ARPS.AILib.Models
+@using System.Text.Json
+@inject GameMasterClient GameMasterClient
+
+<PageTitle>Game Master</PageTitle>
+
+<h1>Game Master</h1>
+@if(actionDescription == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    @foreach (var action in actionDescription)
+    {
+        <p>@action</p>
+    }
+}
+
+@code {
+    private List<string>? actionDescription;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var playerAction = new PlayerAction(){ Description = "Testing", Outcome = false};
+        var response = await GameMasterClient.GetActionDescription(playerAction);
+        actionDescription = response;
+    }
+}

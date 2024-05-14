@@ -1,0 +1,6 @@
+@ARPS_GameMasterAPI_HostAddress = http://localhost:5163
+
+GET {{ARPS_GameMasterAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

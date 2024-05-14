@@ -1,0 +1,66 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.0.0
+MinimumVisualStudioVersion = 17.8.0.0
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AIRolePlayingSystem.AppHost", "AIRolePlayingSystem.AppHost\AIRolePlayingSystem.AppHost.csproj", "{C274FF88-745A-495A-91BA-8A68C523D9C6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AIRolePlayingSystem.ServiceDefaults", "AIRolePlayingSystem.ServiceDefaults\AIRolePlayingSystem.ServiceDefaults.csproj", "{181585B3-641B-4230-B353-21AF8F50FF5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARPS-AILib", "ARPS-AILib\ARPS-AILib.csproj", "{54EF9DC4-1EAF-4508-AE09-C21FC221C6F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARPS-Frontend", "ARPS-Frontend\ARPS-Frontend.csproj", "{57A6B245-B4E3-4A24-A71D-5F12AD03E74E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARPS-GameMasterAPI", "ARPS-GameMasterAPI\ARPS-GameMasterAPI.csproj", "{2B88F617-870B-4A61-BE2D-17FB1067EADC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARPS-ProbabilityCalculatorAPI", "ARPS-ProbabilityCalculatorAPI\ARPS-ProbabilityCalculatorAPI.csproj", "{021B42B2-1CEF-452C-A6DA-190E1B832EDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARPS-WorldDescriberAPI", "ARPS-WorldDescriberAPI\ARPS-WorldDescriberAPI.csproj", "{1643AC51-48F8-41E6-82C3-14B4D90DEFEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARPS-Site", "ARPS-Site\ARPS-Site.csproj", "{A072D40C-B055-4705-A162-07F3CB4C6121}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C274FF88-745A-495A-91BA-8A68C523D9C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C274FF88-745A-495A-91BA-8A68C523D9C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C274FF88-745A-495A-91BA-8A68C523D9C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C274FF88-745A-495A-91BA-8A68C523D9C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{181585B3-641B-4230-B353-21AF8F50FF5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{181585B3-641B-4230-B353-21AF8F50FF5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{181585B3-641B-4230-B353-21AF8F50FF5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{181585B3-641B-4230-B353-21AF8F50FF5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54EF9DC4-1EAF-4508-AE09-C21FC221C6F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54EF9DC4-1EAF-4508-AE09-C21FC221C6F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54EF9DC4-1EAF-4508-AE09-C21FC221C6F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54EF9DC4-1EAF-4508-AE09-C21FC221C6F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57A6B245-B4E3-4A24-A71D-5F12AD03E74E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57A6B245-B4E3-4A24-A71D-5F12AD03E74E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57A6B245-B4E3-4A24-A71D-5F12AD03E74E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57A6B245-B4E3-4A24-A71D-5F12AD03E74E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B88F617-870B-4A61-BE2D-17FB1067EADC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B88F617-870B-4A61-BE2D-17FB1067EADC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B88F617-870B-4A61-BE2D-17FB1067EADC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B88F617-870B-4A61-BE2D-17FB1067EADC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{021B42B2-1CEF-452C-A6DA-190E1B832EDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{021B42B2-1CEF-452C-A6DA-190E1B832EDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{021B42B2-1CEF-452C-A6DA-190E1B832EDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{021B42B2-1CEF-452C-A6DA-190E1B832EDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1643AC51-48F8-41E6-82C3-14B4D90DEFEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1643AC51-48F8-41E6-82C3-14B4D90DEFEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1643AC51-48F8-41E6-82C3-14B4D90DEFEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1643AC51-48F8-41E6-82C3-14B4D90DEFEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A072D40C-B055-4705-A162-07F3CB4C6121}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A072D40C-B055-4705-A162-07F3CB4C6121}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A072D40C-B055-4705-A162-07F3CB4C6121}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A072D40C-B055-4705-A162-07F3CB4C6121}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1EFBFF09-5573-45A5-BECE-2687C4A60724}
+	EndGlobalSection
+EndGlobal

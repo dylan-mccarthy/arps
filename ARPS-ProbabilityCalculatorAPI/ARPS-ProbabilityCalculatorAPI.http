@@ -1,0 +1,6 @@
+@ARPS_ProbabilityCalculatorAPI_HostAddress = http://localhost:5298
+
+GET {{ARPS_ProbabilityCalculatorAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
