@@ -15,7 +15,7 @@ var tags = {
 }
 
 resource rg 'Microsoft.Resources/resourceGroups@2022-09-01' = {
-  name: 'rg-${environmentName}'
+  name: 'rg-arps-australiaeast-${environmentName}'
   location: location
   tags: tags
 }
