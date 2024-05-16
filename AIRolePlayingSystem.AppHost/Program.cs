@@ -1,8 +1,8 @@
 var builder = DistributedApplication.CreateBuilder(args);
 
-var gameMasterAPI = builder.AddProject<Projects.ARPS_GameMasterAPI>("ARPS-GameMasterAPI");
-var probabilityCalculatorAPI = builder.AddProject<Projects.ARPS_ProbabilityCalculatorAPI>("ARPS-ProbabilityCalculatorAPI");
-var worldDescriberAPI = builder.AddProject<Projects.ARPS_WorldDescriberAPI>("ARPS-WorldDescriberAPI");
+var gameMasterAPI = builder.AddProject<Projects.ARPS_GameMasterAPI>("arps-gamemasterapi");
+var probabilityCalculatorAPI = builder.AddProject<Projects.ARPS_ProbabilityCalculatorAPI>("arps-probabilitycalculatorapi");
+var worldDescriberAPI = builder.AddProject<Projects.ARPS_WorldDescriberAPI>("arp-worlddescriberapi");
 
 /*
 builder.AddProject<Projects.ARPS_Frontend>("ARPS-Frontend")
@@ -12,7 +12,7 @@ builder.AddProject<Projects.ARPS_Frontend>("ARPS-Frontend")
     .WithReference(worldDescriberAPI);
 */
 
-builder.AddProject<Projects.ARPS_Site>("ARPS-Site")
+builder.AddProject<Projects.ARPS_Site>("arp-site")
     .WithExternalHttpEndpoints()
     .WithReference(gameMasterAPI)
     .WithReference(probabilityCalculatorAPI)
