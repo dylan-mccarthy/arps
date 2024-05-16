@@ -27,6 +27,11 @@ builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddHttpClient<GameMasterClient>(client => {
     client.BaseAddress = new("https+http://ARPS-GameMasterAPI");
 });
+
+builder.Services.AddHttpClient<ProbabilityCalculatorClient>(client => {
+    client.BaseAddress = new("https+http://ARPS-ProbabilityCalculatorAPI");
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -1,0 +1,31 @@
+@page "/probability"
+@using ARPS.AILib.Models
+@using System.Text.Json
+@inject ProbabilityCalculatorClient ProbabilityCalculatorClient
+
+<PageTitle>Probability</PageTitle>
+
+<h1>Probability Calulation</h1>
+
+@if(actionDescription == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <p>@actionDescription.Description</p>
+    <p>@actionDescription.Outcome</p>
+
+}
+
+
+@code {
+    private PlayerAction? actionDescription;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var playerAction = new PlayerAction(){ Description = "Testing", Outcome = false};
+        var response = await ProbabilityCalculatorClient.GetProbability(playerAction);
+        actionDescription = response;
+    }
+}

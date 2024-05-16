@@ -27,9 +27,13 @@ app.MapPost("/calculate", (PlayerAction PlayerAction) => {
     var probability = aiService.GetTextCompletions(JsonSerializer.Serialize(PlayerAction));
     //Roll dice to determine success
     try{
+        /*
         int probabilityInt = int.Parse(probability[0]);
+        */
+        int probabilityInt = 50;
         Random random = new();
         bool success = random.Next(1, 101) <= probabilityInt;
+        
         //Return result
         var response = new PlayerAction { Description = PlayerAction.Description, Outcome = success };
         return response;

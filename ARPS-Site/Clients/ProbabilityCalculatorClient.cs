@@ -2,10 +2,11 @@ using System.Text.Json;
 using ARPS.AILib.Models;
 
 public class ProbabilityCalculatorClient(HttpClient client){
-    public async Task<List<string>?> GetProbability(PlayerAction playerAction){
-        var response = await client.PostAsJsonAsync("/probability", playerAction);
+    public async Task<PlayerAction?> GetProbability(PlayerAction playerAction){
+        var response = await client.PostAsJsonAsync("/calculate", playerAction);
         response.EnsureSuccessStatusCode();
         var responseString = await response.Content.ReadAsStringAsync();
-        return JsonSerializer.Deserialize<List<string>>(responseString);
+        var playerActionResponse = JsonSerializer.Deserialize<PlayerAction>(responseString);
+        return playerActionResponse;
     }
 }
