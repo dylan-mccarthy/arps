@@ -8,7 +8,7 @@
 <h1>Game Master</h1>
 @if(actionDescription == null)
 {
-    <p><em>Loading...</em></p>
+    <p><em>No Data</em></p>
 }
 else
 {
@@ -18,13 +18,36 @@ else
     }
 }
 
+<form @onsubmit="HandleSubmit">
+    <label>Player Action</label>
+    <input type="text" id="action" name="action" placeholder="Enter your action" @bind="playerActionInput">
+    <select @bind="outcome">
+        <option value="true">True</option>
+        <option value="false">False</option>
+    </select>
+    <input type="submit" value="Submit">
+</form>
+
 @code {
     private List<string>? actionDescription;
+    private List<PlayerAction>? playerActions;
+    private string? playerActionInput;
+    private bool outcome;
 
-    protected override async Task OnInitializedAsync()
+    public async Task OnInitializedAsync()
     {
-        var playerAction = new PlayerAction(){ Description = "Testing", Outcome = false};
+        actionDescription = new List<string>();
+        playerActions = new List<PlayerAction>();
+        playerActionInput = "";
+    }
+
+    private async Task HandleSubmit()
+    {
+        var playerAction = new PlayerAction() { Description = playerActionInput, Outcome = outcome };
+        Console.WriteLine("Player Action: " + JsonSerializer.Serialize(playerAction));
         var response = await GameMasterClient.GetActionDescription(playerAction);
+        Console.WriteLine("Response: " + JsonSerializer.Serialize(response));
         actionDescription = response;
     }
+
 }
