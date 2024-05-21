@@ -3,10 +3,6 @@ using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.ChatCompletion;
 
 
-//using Azure.AI.OpenAI;
-//using Microsoft.SemanticKernel;
-using OllamaSharp;
-
 namespace ARPS.AILib;
 public interface IAIService
 {
@@ -16,7 +12,7 @@ public interface IAIService
 public class AIService : IAIService
 {
     private readonly IChatCompletionService _chatCompletionService;
-    public AIService(string url, string model, IChatCompletionService chatCompletionService)
+    public AIService(IChatCompletionService chatCompletionService)
     {
         _chatCompletionService = chatCompletionService;
     }
