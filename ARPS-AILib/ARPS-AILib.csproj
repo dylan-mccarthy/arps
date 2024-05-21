@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.SemanticKernel" Version="1.11.1" />
+    <PackageReference Include="OllamaSharp" Version="1.1.9" />
   </ItemGroup>
 
 </Project>
